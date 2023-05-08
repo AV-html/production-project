@@ -1,6 +1,13 @@
 .app.normal {
-  --bg-color: #f7f7f7;
+  --bg-color-primary: #f7f7f7;
+  --bg-color-secondary: #292929;
 
   --primary-color: #000;
+  --inverted-primary-color: #f7f7f7;
+
   --secondary-color: #292929;
+  --inverted-secondary-color: #fff;
+
+  --tab-color: #FFDD56;
+  --link-color: #69C0FF
 }
