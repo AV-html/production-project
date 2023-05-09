@@ -1,22 +1,18 @@
 .button {
-  cursor: pointer;
-  color: var(--inverted-primary-color);
+    cursor: pointer;
+    color: var(--inverted-primary-color);
 }
 
 .primary {
-
-}
-
-.secondary {
-
+    background-color: var(--button-color);
 }
 
 .outline {
-
+    background-color: transparent;
 }
 
 .clear {
-  background-color: transparent;
-  border: none;
-  outline: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
 }

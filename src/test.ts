@@ -1,3 +1,1 @@
-export const testFn = (arg: number) => {
-  return arg
-}
+export const testFn = (arg: number) => arg;
