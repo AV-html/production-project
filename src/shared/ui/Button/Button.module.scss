@@ -1,5 +1,6 @@
 .button {
   cursor: pointer;
+  color: var(--inverted-primary-color);
 }
 
 .primary {
@@ -18,6 +19,4 @@
   background-color: transparent;
   border: none;
   outline: none;
-  margin: 0;
-  padding: 0;
 }

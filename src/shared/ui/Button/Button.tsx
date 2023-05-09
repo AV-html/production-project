@@ -4,7 +4,7 @@ import {classNames} from '../../lib/classNames/classNames';
 
 import classes from './Button.module.scss'
 
-export enum ThemeButton {
+export enum VariantButton {
   PRIMARY = 'primary',
   SECONDARY = 'secondary',
   OUTLINE = 'outline',
@@ -12,20 +12,20 @@ export enum ThemeButton {
 }
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  theme?: ThemeButton
+  variant?: VariantButton
 }
 
 export const Button: FC<ButtonProps> = memo((props) => {
   const {
     className,
-    theme,
+    variant,
     ...rest
   } = props
 
   return (
     <button
       {...rest}
-      className={classNames(classes.button, {}, [className, theme])}
+      className={classNames(classes.button, {}, [className, classes[variant]])}
     />
   );
 });
