@@ -1,12 +1,11 @@
-import {ButtonHTMLAttributes, FC, memo} from 'react';
+import { ButtonHTMLAttributes, FC, memo } from 'react';
 
-import {classNames} from '../../lib/classNames/classNames';
+import { classNames } from '../../lib/classNames/classNames';
 
-import classes from './Button.module.scss'
+import classes from './Button.module.scss';
 
 export enum VariantButton {
   PRIMARY = 'primary',
-  SECONDARY = 'secondary',
   OUTLINE = 'outline',
   CLEAR = 'clear'
 }
@@ -16,16 +15,18 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button: FC<ButtonProps> = memo((props) => {
-  const {
-    className,
-    variant,
-    ...rest
-  } = props
+    const {
+        className,
+        variant,
+        type = 'button',
+        ...rest
+    } = props;
 
-  return (
-    <button
-      {...rest}
-      className={classNames(classes.button, {}, [className, classes[variant]])}
-    />
-  );
+    return (
+        <button
+            {...rest}
+            type={type}
+            className={classNames(classes.button, {}, [className, classes[variant]])}
+        />
+    );
 });
