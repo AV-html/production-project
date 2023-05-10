@@ -18,7 +18,7 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className }) => {
             onClick={toggleTheme}
             variant={VariantButton.CLEAR}
         >
-            <ThemeIcon fill="var(--tab-color)" />
+            <ThemeIcon />
         </Button>
     );
 };
