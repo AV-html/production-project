@@ -17,6 +17,9 @@ export default {
     rootDir: '../../',
     testEnvironment: 'jsdom',
     testMatch: [
-        '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
+        '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)', // Универсально для МакОС и Вин
+    ],
+    modulePaths: [
+        '<rootDir>src', // Для работы абсолютных импортов
     ],
 };
